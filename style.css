@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+
+header, footer {
+    background-color: #4CAF50; /* Green header/footer */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+marquee {
+    font-size: 18px;
+    color: #ffffff; /* White text in marquee */
+}
+
+/* Sidebar Styles */
+#sidebar {
+    width: 250px;
+    background-color: #333; /* Dark sidebar background */
+    position: fixed; /* Fixed sidebar */
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Sidebar shadow */
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Hidden by default */
+}
+
+#sidebar.active {
+    transform: translateX(0); /* Show sidebar when active */
+}
+
+.menu-item {
+    display: block;
+    color: #fff; /* White menu item text */
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #575757; /* Darker gray on hover */
+}
+
+/* Button Styles */
+#toggle-btn {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; /* Ensures button is above the sidebar */
+}
+
+/* Content Styles */
+.content {
+    margin-left: 260px; /* Space for sidebar */
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo {
+    margin-right: 20px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular photo */
+}
+
+h2 {
+    color: #4CAF50; /* Green headers */
+}
+
+h3 {
+    color: #333; /* Dark headers */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.school-item {
+    background-color: #ffffff; /* White background for items */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Item shadow */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* Stack sidebar on smaller screens */
+    }
+
+    #toggle-btn {
+        top: 10px; /* Adjust button position */
+    }
+
+    .content {
+        margin-left: 0; /* No space for sidebar */
+    }
+}
